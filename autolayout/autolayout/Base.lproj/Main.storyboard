@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHF-gQ-f6h"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEg-XZ-3Yk"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="16H-3k-rJg">
-                                <rect key="frame" x="20" y="20" width="130" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16H-3k-rJg">
+                                <rect key="frame" x="20" y="20" width="270" height="270"/>
                                 <color key="backgroundColor" red="1" green="0.36955772660000002" blue="0.19602412550000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="dik-hk-6ch">
-                                <rect key="frame" x="170" y="20" width="130" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dik-hk-6ch">
+                                <rect key="frame" x="310" y="20" width="270" height="270"/>
                                 <color key="backgroundColor" red="1" green="0.80157253336349388" blue="0.20946555187155314" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="WQR-WJ-3bO">
-                                <rect key="frame" x="20" y="294" width="280" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQR-WJ-3bO">
+                                <rect key="frame" x="20" y="310" width="560" height="270"/>
                                 <color key="backgroundColor" red="0.083009542697306662" green="0.74031680278630629" blue="0.97909564393939397" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SEg-XZ-3Yk" firstAttribute="top" secondItem="WQR-WJ-3bO" secondAttribute="bottom" constant="20" id="5va-Cm-dJx"/>
+                            <constraint firstItem="dik-hk-6ch" firstAttribute="top" secondItem="BHF-gQ-f6h" secondAttribute="bottom" id="Cwm-GD-y9K"/>
+                            <constraint firstItem="WQR-WJ-3bO" firstAttribute="height" secondItem="16H-3k-rJg" secondAttribute="height" id="GhV-f3-NWY"/>
+                            <constraint firstItem="dik-hk-6ch" firstAttribute="leading" secondItem="16H-3k-rJg" secondAttribute="trailing" constant="20" id="M0D-QK-UGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dik-hk-6ch" secondAttribute="trailing" id="QW1-Tu-uk7"/>
+                            <constraint firstItem="dik-hk-6ch" firstAttribute="height" secondItem="16H-3k-rJg" secondAttribute="height" id="RCD-RG-Zpo"/>
+                            <constraint firstItem="dik-hk-6ch" firstAttribute="width" secondItem="16H-3k-rJg" secondAttribute="width" id="Si7-EH-Qli"/>
+                            <constraint firstItem="16H-3k-rJg" firstAttribute="top" secondItem="BHF-gQ-f6h" secondAttribute="bottom" id="ZZF-1U-U2l"/>
+                            <constraint firstItem="16H-3k-rJg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eFt-wG-nkl"/>
+                            <constraint firstItem="WQR-WJ-3bO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m0A-zV-clH"/>
+                            <constraint firstItem="WQR-WJ-3bO" firstAttribute="top" secondItem="16H-3k-rJg" secondAttribute="bottom" constant="20" id="oQh-eU-bSW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WQR-WJ-3bO" secondAttribute="trailing" id="xW7-ML-QyA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="WQR-WJ-3bO" id="Lbu-2Q-AVO"/>
@@ -38,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="345"/>
+            <point key="canvasLocation" x="288.75" y="364.43661971830983"/>
         </scene>
     </scenes>
 </document>
